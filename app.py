@@ -49,7 +49,6 @@ def sentiment_analysis():
 
         # Split the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(df[text_col], df[label_col], test_size=0.2, random_state=42)
-        print("SPLIT DATA CHECK - ||| -")
 
         # Vectorize the text data
         vectorizer = CountVectorizer()
@@ -60,6 +59,7 @@ def sentiment_analysis():
         print("ENTER TRAIN MULTIMODAL NAIVE BAYES CLASSIFIER")
         # Train a Multinomial Naive Bayes classifier
         clf = MultinomialNB()
+        print("FIT ENTER -- MULTIMODAL NAIVE BAYES CLASSIFIER --")
         clf.fit(X_train_vectorized, y_train)
         print("Model fit. check")
         y_pred = clf.predict(X_test_vectorized)
