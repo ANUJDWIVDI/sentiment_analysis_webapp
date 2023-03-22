@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analysis</title>
+	<style>
+		.analyze-btn {
+			display: block;
+			margin: 0 auto;
+			margin-top: 100px;
+			font-size: 24px;
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2 style="text-align: center;">Sentiment Analysis</h2>
+		<form action="/sentiment-analysis" method="POST">
+			<label for="text_col">Text Column:</label>
+			<input type="text" id="text_col" name="text_col"><br><br>
+			<label for="label_col">Label Column:</label>
+			<input type="text" id="label_col" name="label_col"><br><br>
+			<button class="analyze-btn" type="submit">Analyze</button>
+		</form>
+	</div>
+</body>
+</html>
